@@ -5,9 +5,10 @@ As an English student
 I want to look up word definitions
 
 Scenario: Ensuring cond01
-Given the user is on the weather-forecast.com page
-When the user looks up the definition of the
-Then they should see the definition 'A common, round fruit produced by the tree Malus domestica, cultivated in temperate climates.'
+Given chrome started
+And proceed to http://www.weather-forecast.com
+When the user types the <capital>
+Then they should see the corresponding <country>
 
 Scenario: Ensuring cond02
 Given the user is on the weather-forecast.com page
